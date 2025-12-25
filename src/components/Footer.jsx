@@ -17,35 +17,30 @@ const Footer = () => {
         {/* LEFT */}
         <div className="footer-left">
           <h2>
-            Manish<span>VM</span>
+            Manish<span className="footer-span">VM</span>
           </h2>
           <p>Thanks for reading.</p>
-
-          <div className="newsletter">
-            <input type="email" placeholder="you@email.com" />
-            <button>➜</button>
-          </div>
         </div>
 
         {/* LINKS */}
         <div className="footer-links">
-          {/* <div>
-            <h4>Contact</h4>
+          <div>
+            <h3 className="social-link-list-footer-contact">Contact</h3>
             <ul>
-              <li>manishvm310@gmail.com</li>
-              <li>+91 - 6385329793</li>
+              <li className="li1"><img src="/email_logo.png" height="30px" width="30px" alt="email"/><a href="mailto:manishvm310@gmail.com" target="_blank">manishvm310@gmail.com</a></li>
+              <li className="li1"><img src="/phone-logo.png" height="30px" width="30px" alt="phone"/><a href="tel:+91-6385329793">+91 - 6385329793</a></li>
             </ul>
-          </div> */}
+          </div>
 
 
-          {/* <div>
-            <h4>GENERAL</h4>
-            <ul>
-              <li>About</li>
-              <li>Blog</li>
-              <li>Contact</li>
+          <div>
+            <h3 className="social-link-list-footer-h3">Social Links</h3>
+            <ul className="social-link-list-footer">
+              <li className="li1"><img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" height="50px" width="50px" /></li>
+              <li className="li1"><img src="/github_logo.png" alt="github" height="50px" width="50px" /></li>
+              <li className="li1"><img src="/insta_logo.png" alt="linkedin" height="50px" width="50px" /></li>
             </ul>
-          </div> */}
+          </div>
         </div>
       </div>
 
