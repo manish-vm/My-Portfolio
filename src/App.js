@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -9,17 +10,36 @@ import Experience from "./components/Experience"
 import Footer from "./components/Footer";
 import "./styles.css";
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Hero />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <About />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Skills />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Experience />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Projects />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Contact />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Footer />
+      </motion.div>
     </div>
   );
 }
