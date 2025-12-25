@@ -29,33 +29,23 @@ const Footer = () => {
 
         {/* LINKS */}
         <div className="footer-links">
-          <div>
-            <h4>BROWSE BY CATEGORY</h4>
+          {/* <div>
+            <h4>Contact</h4>
             <ul>
-              <li>CSS</li>
-              <li>React</li>
-              <li>JavaScript</li>
-              <li>Animation</li>
+              <li>manishvm310@gmail.com</li>
+              <li>+91 - 6385329793</li>
             </ul>
-          </div>
+          </div> */}
 
-          <div>
-            <h4>INTERACTIVE COURSES</h4>
-            <ul>
-              <li>CSS for JS Devs</li>
-              <li>The Joy of React</li>
-              <li>Whimsical Animations</li>
-            </ul>
-          </div>
 
-          <div>
+          {/* <div>
             <h4>GENERAL</h4>
             <ul>
               <li>About</li>
               <li>Blog</li>
               <li>Contact</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 
