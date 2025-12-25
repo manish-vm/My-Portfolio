@@ -24,7 +24,7 @@ const Contact = () => {
         <input type="text" name="user_name" placeholder="Name" required />
         <input type="email" name="user_email" placeholder="Email" required />
         <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" className="button-40"><span class="text">Send Message</span></button>
       </form>
       {statusMessage && <p className="status-message">{statusMessage}</p>}
     </section>
