@@ -18,8 +18,23 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px ;
   height: 80px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
 }
 
 .logo {
@@ -29,9 +44,9 @@ body {
 }
 
 .logo1{
-  margin-top: -50px;
   margin-left: -20px;
 }
+
 
 .navbar ul {
   display: flex;
@@ -903,15 +918,44 @@ a{
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  body{
+    width: auto;
+  }
   .navbar {
     padding: 15px 20px;
     flex-direction: column;
     align-items: center;
   }
 
+  .hamburger {
+    display: none;
+    align-self: flex-start;
+    margin-top: -100px;
+  }
+
   .navbar ul {
+    display: none;
+    flex-direction: column;
     gap: 15px;
     margin-top: 10px;
+    width: 80%;
+    background-color: #8c00ff;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 
   .hero {
@@ -1067,6 +1111,7 @@ a{
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
+
   .hero-text {
     font-size: medium;
   }
@@ -1108,7 +1153,7 @@ a{
     padding: 5px 10px;
   }
   .aboutme-thumbnail{
-    margin-left: 30px;
+    margin-left: 40px;
     height: 280px;
     width: 280px;
   }
@@ -1116,6 +1161,20 @@ a{
     text-align: justify;
   }
   .hero{
-    margin-top: 10px;
+    margin-top: 50px;
   }
+  .top-left{
+    margin-top: -60px;
+  }
+  .exp-desc{
+    text-align: justify;
+  }
+  .footer-left{
+    text-align: center;
+    margin-top: -50px;
+  }
+  .logo1{
+    margin-top: -20px;
+  }
+  
 }
