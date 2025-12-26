@@ -5,6 +5,10 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: radial-gradient(circle at top, #2b1055, #000);
   color: #fff;
@@ -14,6 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px 80px;
+  border-bottom: 1px solid black;
 }
 
 .navbar ul {
