@@ -7,18 +7,25 @@ const projects = [
     demo: "https://metromens-ecommerce-frontend.vercel.app/",
   },
   {
-    title: "StartupConnect application",
-    desc: "Built a MERN stack web platform connecting startups with investors, mentors, and service providers, featuring user authentication, profile management, and interactive dashboards to enable efficient networking and collaboration.",
-    image: "/startup-connect.png",
-    repo: "https://github.com/manish-vm/",
-    demo: "#",
-  },
-  {
     title: "Online Course Enrollment",
     desc: "A full-stack course enrollment platform with user authentication, role-based access, admin course management, and secure enrollments, built using React, Node.js, Express, MongoDB, and JWT.",
     image: "/course.png",
     repo: "https://github.com/manish-vm/",
-    demo: "#",
+    demo: "https://online-course-enrollment-system-fro.vercel.app/",
+  },
+  {
+    title: "KTech Digital Solutions – Agency Platform",
+    desc: "A high-converting, professional website for a regional digital marketing agency. Built with React 19 and Tailwind CSS, it features 15+ SEO-optimized service pages, a responsive UI with glassmorphic elements, and a custom-built Admin Dashboard for managing portfolio projects and blog content.",
+    image: "/Ktech.png",
+    repo: "https://github.com/manish-vm/",
+    demo: "https://k-tech-site.vercel.app/",
+  },
+   {
+    title: "StartupConnect application",
+    desc: "Built a MERN stack web platform connecting startups with investors, mentors, and service providers, featuring user authentication, profile management, and interactive dashboards to enable efficient networking and collaboration.",
+    image: "/startup-connect.png",
+    repo: "https://github.com/manish-vm/",
+    demo: "https://startupconnectz.com/home",
   },
 ];
 
