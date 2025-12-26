@@ -4,7 +4,7 @@ const experiences = [
   {
     role: "FinTech Engineer Intern",
     company: "Intellect Design Arena",
-    duration: "2024 – 2025",
+    duration: "Jan-2025 to Jul-2025 ",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2jJdoSxp3M8YI0M-C6faL3FGZMoI7oA4WjA&s",
     description:
       "Worked on enterprise-grade fintech platforms, contributing to frontend modules and collaborating with backend teams on scalable financial solutions.",
@@ -13,7 +13,7 @@ const experiences = [
   {
     role: "Full Stack Developer Intern",
     company: "Kairaa Tech Serve",
-    duration: "2023 – 2024",
+    duration: "June-2024 to Dec-2024",
     logo: "https://media.licdn.com/dms/image/v2/D560BAQHxzVCeOLr31w/company-logo_200_200/company-logo_200_200/0/1693814470227/kairaa_chain_logo?e=2147483647&v=beta&t=9KNmpsSL7zuXEBJ0qpWX-sNLM43SpuM7cbAMltWz2SM",
     description:
       "Built and maintained full-stack applications using MERN stack, developed REST APIs, and improved UI performance and usability.",
@@ -56,7 +56,7 @@ const Experience = () => {
                 <span className="exp-duration">{exp.duration}</span>
               </div>
 
-              <p>{exp.description}</p>
+              <p className="exp-desc">{exp.description}</p>
 
               <div className="tech-stack">
                 {exp.tech.map((tech, i) => (
