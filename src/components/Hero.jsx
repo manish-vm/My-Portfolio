@@ -7,7 +7,7 @@ const Hero = () => {
                     <h4 className="Hero-para">AI Full Stack Developer</h4>
                     <button className="download-btn">Download CV</button><br></br>
                     <img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" className="social-links" />
-                    <a href="https://github.com/manish-vm?tab=repositories"><img src="/github_logo.png" alt="linkedin" className="social-links" /></a>
+                    <a href="https://github.com/manish-vm?tab=repositories" target="_blank"><img src="/github_logo.png" alt="linkedin" className="social-links" /></a>
                     <img src="/insta_logo.png" alt="linkedin" className="social-links" />
                 </div>
                 <div className="hero-img">
