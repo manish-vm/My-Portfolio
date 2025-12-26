@@ -14,11 +14,23 @@ body {
   color: #fff;
 }
 
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 80px;
-  border-bottom: 1px solid black;
+  padding: 20px ;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo1{
+  margin-top: -50px;
+  margin-left: -20px;
 }
 
 .navbar ul {
@@ -1096,7 +1108,7 @@ a{
     padding: 5px 10px;
   }
   .aboutme-thumbnail{
-    margin-left: 50px;
+    margin-left: 30px;
     height: 280px;
     width: 280px;
   }
