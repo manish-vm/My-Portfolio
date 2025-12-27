@@ -36,9 +36,9 @@ const Footer = () => {
           <div>
             <h3 className="social-link-list-footer-h3">Social Links</h3>
             <ul className="social-link-list-footer">
-              <li className="li1"><img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" height="50px" width="50px" /></li>
-              <li className="li1"><img src="/github_logo.png" alt="github" height="50px" width="50px" /></li>
-              <li className="li1"><img src="/insta_logo.png" alt="linkedin" height="50px" width="50px" /></li>
+              <li className="li1"><a href="https://www.linkedin.com/in/manish310a/"><img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" height="50px" width="50px" /></a></li>
+              <li className="li1"><a href="https://github.com/manish-vm?tab=repositories"><img src="/github_logo.png" alt="github" height="50px" width="50px" /></a></li>
+              <li className="li1"><a href="https://www.instagram.com/manish_vmk_/"><img src="/insta_logo.png" alt="linkedin" height="50px" width="50px" /></a></li>
             </ul>
           </div>
         </div>
