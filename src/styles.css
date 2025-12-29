@@ -1150,8 +1150,12 @@ a{
     padding: 8px 16px;
     font-size: 12px;
   }
-
-  .btn-outline, .btn-gradient {
+ 
+  .btn-outline{
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+   .btn-gradient {
     padding: 8px 16px;
     font-size: 12px;
   }
@@ -1196,8 +1200,9 @@ a{
   .logo1{
     margin-top: -20px;
   }
-  
+
 }
+
 
 .education-section {
   padding: 100px 80px;
