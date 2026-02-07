@@ -29,7 +29,9 @@ const cardVariants = {
 const Experience = () => {
   return (
     <section className="experience-section" id="experience">
-      <h2 className="experience-title">Experience</h2>
+      <h2 className="experience-title">Experience
+        <span className="experience-underline"></span>
+      </h2>
 
       <div className="timeline">
         {experiences.map((exp, index) => (
@@ -72,3 +74,4 @@ const Experience = () => {
 };
 
 export default Experience;
+

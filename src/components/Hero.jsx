@@ -2,13 +2,14 @@ const Hero = () => {
     return (
         <>
             <section className="hero">
+                
                 <div className="hero-text">
                     <h1>Hi, I'm <span>Manish</span></h1>
                     <h4 className="Hero-para">AI Full Stack Developer</h4>
                     <button className="download-btn"><a href="/Manish Kumar V - Resume.pdf">Download CV</a></button><br></br>
-                    <a href="https://www.linkedin.com/in/manish310a/" target="_blank"><img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" className="social-links" /></a>
-                    <a href="https://github.com/manish-vm?tab=repositories" target="_blank"><img src="/github_logo.png" alt="github" className="social-links" /></a>
-                    <a href="https://www.instagram.com/manish_vmk_/" target="_blank"><img src="/insta_logo.png" alt="instagra," className="social-links" /></a>
+                    <a href="https://www.linkedin.com/in/manish310a/" ><img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" className="social-links" /></a>
+                    <a href="https://github.com/manish-vm?tab=repositories" ><img src="/github_logo.png" alt="github" className="social-links" /></a>
+                    <a href="https://www.instagram.com/manish_vmk_/" ><img src="/insta_logo.png" alt="instagra," className="social-links" /></a>
                 </div>
                 <div className="hero-img">
                     <img src="IMG_20251223_183200.jpg" alt="profile" className="hero-img" />

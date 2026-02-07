@@ -16,7 +16,7 @@ const projects = [
   {
     title: "KTech Digital Solutions – Agency Platform",
     desc: "A high-converting, professional website for a regional digital marketing agency. Built with React 19 and Tailwind CSS, it features 15+ SEO-optimized service pages, a responsive UI with glassmorphic elements, and a custom-built Admin Dashboard for managing portfolio projects and blog content.",
-    image: "/ktech.png",
+    image: "/Ktech.png",
     repo: "https://github.com/manish-vm/",
     demo: "https://k-tech-site.vercel.app/",
   },
@@ -32,7 +32,9 @@ const projects = [
 const Projects = () => {
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">My Real-time Projects</h2>
+      <h2 className="projects-title">My Real-time Projects
+         <span className="projects-underline"></span>
+      </h2>
 
       {/* FILTER BUTTONS */}
       <div className="project-tabs">
@@ -66,5 +68,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-

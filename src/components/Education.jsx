@@ -29,28 +29,34 @@ const cardVariants = {
 const Education = () => {
   return (
     <section className="education-section" id="education">
-      <h2 className="education-title">Education</h2>
+      <h2 className="education-title">Education
+        <span className="education-underline"></span>
+      </h2>
 
-      <div className="education-grid">
+      <div className="timeline">
         {educationData.map((edu, index) => (
           <motion.div
+            className="timeline-item"
             key={index}
-            className="education-card"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
           >
-            <div className="edu-header">
-              <img src={edu.logo} alt={edu.institution} />
-              <span className="edu-duration">{edu.duration}<br></br>CGPA - {edu.cgpa}</span>
+            <div className="timeline-dot" />
+
+            <div className="education-card">
+              <div className="edu-header">
+                <img src={edu.logo} alt={edu.institution} />
+                <span className="edu-duration">{edu.duration}<br />CGPA - {edu.cgpa}</span>
+              </div>
+
+              <h3>{edu.degree}</h3>
+              <h4>{edu.institution}</h4>
+
+              <p>{edu.description}</p>
             </div>
-
-            <h3>{edu.degree}</h3>
-            <h4>{edu.institution}</h4>
-
-            <p>{edu.description}</p>
           </motion.div>
         ))}
       </div>

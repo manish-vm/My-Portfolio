@@ -19,7 +19,9 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
-      <h2>Contact Form</h2>
+      <h2>Contact Form
+        <span className="contact-underline"></span>
+      </h2>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder="Name" required />
         <input type="email" name="user_email" placeholder="Email" required />

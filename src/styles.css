@@ -1131,7 +1131,9 @@ a{
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
-
+   body{
+    overflow-x: auto;
+   }
   .hero-text {
     font-size: medium;
   }
@@ -1285,5 +1287,35 @@ a{
     padding: 80px 30px;
   }
 }
-
-
+.experience-underline {
+  display: block;
+  width: 180px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+}
+.projects-underline{
+  display: block;
+  width: 380px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+}
+.education-underline{
+  display: block;
+  width: 170px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+}
+.contact-underline{
+  display: block;
+  width: 150px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+}

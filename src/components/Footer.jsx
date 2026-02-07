@@ -27,7 +27,7 @@ const Footer = () => {
           <div>
             <h3 className="social-link-list-footer-contact">Contact</h3>
             <ul>
-              <li className="li1"><img src="/email_logo.png" height="30px" width="30px" alt="email"/><a href="mailto:manishvm310@gmail.com" target="_blank">manishvm310@gmail.com</a></li>
+              <li className="li1"><img src="/email_logo.png" height="30px" width="30px" alt="email"/><a href="mailto:manishvm310@gmail.com">manishvm310@gmail.com</a></li>
               <li className="li1"><img src="/phone-logo.png" height="30px" width="30px" alt="phone"/><a href="tel:+91-6385329793">+91 - 6385329793</a></li>
             </ul>
           </div>

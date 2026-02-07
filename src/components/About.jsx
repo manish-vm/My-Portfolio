@@ -1,21 +1,28 @@
+import React from "react";
+import "./About.css";
+
 const About = () => {
   return (
-    <section className="about" id="about">
-      <h1>About Me</h1>
-      <div className="aboutme-content">
-        <img src="/aboutme-thumbnail.png" alt="about" className="aboutme-thumbnail" />
-        <p className="about-me-para">
-          AI-Powered Full-Stack Developer I am a results-driven developer specializing in building scalable web applications and secure APIs. With a background in both fast-paced startups and enterprise environments like Intellect Design Arena, I bridge the gap between robust backend architecture and intuitive frontend experiences.
+    <section className="about-section" id="about">
+      <h2 className="about-title">
+        About Me
+        <span className="about-underline"></span>
+      </h2>
 
-          Currently, I am integrating Prompt Engineering and AI-driven workflows to build next-generation applications that are efficient and future-ready. I thrive on solving complex problems with the MERN stack, Java, and intelligent automation.
-        </p>
-      </div>
-      <div className="about-tags">
-        <span>Web Development</span>
-        <span>UI Design</span>
-        <span>Problem Solving</span>
-        <span>Freelancer</span>
-      </div>
+      <p className="about-text">
+        I am a results-driven Full-Stack Developer with experience in building
+        scalable web applications and secure, high-performance APIs across
+        startup and enterprise environments, including Intellect Design Arena.
+        I specialize in developing robust backend architectures and delivering
+        clean, intuitive frontend experiences using the MERN stack, Java, and
+        RESTful APIs. Currently, I am focused on integrating Prompt Engineering
+        and AI-driven workflows to build intelligent, efficient, and
+        future-ready applications, while actively exploring system design
+        concepts to strengthen my understanding of scalability, performance,
+        and reliability. I am passionate about solving complex technical
+        problems and delivering reliable, high-quality solutions through modern
+        full-stack development and intelligent automation.
+      </p>
     </section>
   );
 };
