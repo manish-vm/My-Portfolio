@@ -16,7 +16,7 @@ const projects = [
   {
     title: "KTech Digital Solutions – Agency Platform",
     desc: "A high-converting, professional website for a regional digital marketing agency. Built with React 19 and Tailwind CSS, it features 15+ SEO-optimized service pages, a responsive UI with glassmorphic elements, and a custom-built Admin Dashboard for managing portfolio projects and blog content.",
-    image: "/Ktech.png",
+    image: "https://github.com/manish-vm/My-Portfolio/blob/main/public/ktech.png?raw=true",
     repo: "https://github.com/manish-vm/",
     demo: "https://k-tech-site.vercel.app/",
   },
@@ -68,3 +68,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
