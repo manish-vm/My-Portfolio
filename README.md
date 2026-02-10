@@ -1,70 +1,168 @@
-# Getting Started with Create React App
+# Manish Kumar V - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website! This project showcases my skills, experience, and projects as an AI Full Stack Developer. Built with modern web technologies, this responsive React application highlights my expertise in full-stack development, AI integration, and user-centric design.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+[View Portfolio](https://manish-portfolio-kappa-two.vercel.app/)
 
-### `npm start`
+## 📋 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [About](#about)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contact](#contact)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📖 About
 
-### `npm test`
+I'm Manish Kumar V, an AI Full Stack Developer passionate about creating innovative web applications and integrating AI solutions. This portfolio demonstrates my proficiency in React, Node.js, and various modern web technologies. It serves as a comprehensive showcase of my technical abilities, professional experience, and creative projects.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Technologies Used
 
-### `npm run build`
+### Frontend
+- **React** (v19.2.3) - Core framework for building the user interface
+- **Framer Motion** (v12.23.26) - Animation library for smooth transitions
+- **React Three Fiber** (v9.4.2) - 3D graphics integration
+- **React Three Drei** (v10.7.7) - Useful helpers for React Three Fiber
+- **Lucide React** (v0.563.0) - Icon library
+- **React Toastify** (v11.0.5) - Notification system
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Development Tools
+- **Create React App** - Build setup
+- **ESLint** - Code linting
+- **Testing Library** - Unit testing framework
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Styling
+- **CSS3** - Custom styling with responsive design
+- **CSS Modules** - Scoped styling for components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+### Core Sections
+- **Hero Section**: Eye-catching introduction with animated elements and social links
+- **About**: Personal background and professional summary
+- **Skills**: Technical skills visualization with interactive elements
+- **Experience**: Professional work history and achievements
+- **Projects**: Showcase of key projects with descriptions and links
+- **Education**: Academic background and certifications
+- **Contact**: Contact form with EmailJS integration for direct messaging
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Technical Highlights
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: Framer Motion-powered transitions and scroll-triggered animations
+- **3D Elements**: Integrated 3D icons and graphics using React Three Fiber
+- **Form Handling**: Contact form with real-time validation and email sending
+- **Performance Optimized**: Lazy loading and efficient rendering
+- **Accessibility**: WCAG compliant design principles
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+portfolio_manish/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── assets/ (images, icons, resume)
+├── src/
+│   ├── components/
+│   │   ├── About.jsx & About.css
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx & Skills.css
+│   ├── App.js & App.css
+│   ├── index.js & index.css
+│   └── styles.css
+├── package.json
+└── README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Installation
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/manish-vm/portfolio_manish.git
+   cd portfolio_manish
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+4. **Open your browser**
+   
+   Navigate to `http://localhost:3000` to view the portfolio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📱 Usage
 
-### Analyzing the Bundle Size
+- **Navigation**: Use the navbar to jump between sections
+- **Responsive**: Resize your browser or view on mobile devices to see responsive design
+- **Contact**: Fill out the contact form to send me a message directly
+- **Download CV**: Click the download button in the Hero section
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Key Code Snippets
 
-### Making a Progressive Web App
+### Animated Section Component (App.js)
+```javascript
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+// Usage in render
+<motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+  <Hero />
+</motion.div>
+```
 
-### Advanced Configuration
+### Hero Component Structure (Hero.jsx)
+```jsx
+const Hero = () => {
+  return (
+    <section className="hero">
+      <div className="hero-text">
+        <h1>Hi, I'm <span>Manish</span></h1>
+        <h4 className="Hero-para">AI Full Stack Developer</h4>
+        <button className="download-btn">
+          <a href="/Manish Kumar V - Resume.pdf">Download CV</a>
+        </button>
+        {/* Social links */}
+      </div>
+      <div className="hero-img">
+        {/* Profile image and 3D tech icons */}
+      </div>
+    </section>
+  );
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📞 Contact
 
-### Deployment
+I'm always open to discussing new opportunities and collaborations!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Email**: [Your Email]
+- **LinkedIn**: [https://www.linkedin.com/in/manish310a/](https://www.linkedin.com/in/manish310a/)
+- **GitHub**: [https://github.com/manish-vm](https://github.com/manish-vm?tab=repositories)
+- **Instagram**: [https://www.instagram.com/manish_vmk_/](https://www.instagram.com/manish_vmk_/)
 
-### `npm run build` fails to minify
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+*Built with ❤️ by Manish*
