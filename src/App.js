@@ -5,9 +5,13 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Education from "./components/Education";
+import Education from "./components/EducationV2";
 import Experience from "./components/Experience"
 import Footer from "./components/Footer";
+import GitHub from "./components/GitHub";
+import Certifications from "./components/Certifications";
+import Achievements from "./components/Achievements";
+import { createPortfolioTheme } from "./theme";
 import "./styles.css";
 
 const sectionVariants = {
@@ -16,8 +20,10 @@ const sectionVariants = {
 };
 
 function App() {
+  const theme = createPortfolioTheme();
+
   return (
-    <div className="app">
+    <div className="app" style={theme}>
       <Navbar />
       <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
         <Hero />
@@ -35,7 +41,16 @@ function App() {
         <Projects />
       </motion.div>
       <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <GitHub />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
         <Education />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Certifications />
+      </motion.div>
+      <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
+        <Achievements />
       </motion.div>
       <motion.div initial="hidden" whileInView="visible" variants={sectionVariants} viewport={{ once: true }}>
         <Contact />

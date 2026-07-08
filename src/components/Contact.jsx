@@ -19,9 +19,15 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
-      <h2>Contact Form
+      <h2>Contact
         <span className="contact-underline"></span>
       </h2>
+      <div className="contact-details">
+        <a href="mailto:manishvm310@gmail.com">manishvm310@gmail.com</a>
+        <a href="https://www.linkedin.com/in/manish310a/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/manish-vm" target="_blank" rel="noreferrer">GitHub</a>
+        <span>India</span>
+      </div>
       <form ref={form} onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder="Name" required />
         <input type="email" name="user_email" placeholder="Email" required />
