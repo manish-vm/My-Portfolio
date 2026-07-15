@@ -154,7 +154,7 @@ const Hero = () => {
 
 I'm always open to discussing new opportunities and collaborations!
 
-- **Email**: [Your Email]
+- **Email**: [manishvm310@gmail.com]
 - **LinkedIn**: [https://www.linkedin.com/in/manish310a/](https://www.linkedin.com/in/manish310a/)
 - **GitHub**: [https://github.com/manish-vm](https://github.com/manish-vm?tab=repositories)
 - **Instagram**: [https://www.instagram.com/manish_vmk_/](https://www.instagram.com/manish_vmk_/)
