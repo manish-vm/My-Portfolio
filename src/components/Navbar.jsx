@@ -12,7 +12,7 @@ const Navbar = () => {
         <>
         <nav className="navbar">
             <a href="#home" className="brand" aria-label="Manish Kumar V home">
-                <img src="/header-logo.png" alt="" aria-hidden="true" />
+                <img src="/header-logo.png" alt="" aria-hidden="true"/>
                 <span>
                     <span>Manish</span>
                     <strong>Full Stack Developer</strong>
