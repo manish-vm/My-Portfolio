@@ -2,27 +2,55 @@ import React from "react";
 import "./About.css";
 
 const About = () => {
+  const highlights = [
+    { value: "3+", label: "Professional roles", detail: "Startup and enterprise delivery experience" },
+    { value: "2025", label: "MCA Graduate", detail: "VIT postgraduate with strong CS fundamentals" },
+    { value: "AI", label: "Current focus", detail: "LLMs, RAG, vector databases, and product AI" },
+  ];
+
+  const capabilities = ["React systems", "REST APIs", "MongoDB workflows", "Role-based access", "Analytics", "Automation", "System design", "AI integrations"];
+
   return (
     <section className="about-section" id="about">
-      <h2 className="about-title">
-        About Me
-        <span className="about-underline"></span>
-      </h2>
+      <div className="about-header">
+        <p className="eyebrow">About Me</p>
+        <h2 className="about-title">
+          Building dependable products from frontend polish to backend logic
+          <span className="about-underline"></span>
+        </h2>
+      </div>
 
-      <p className="about-text">
-        I am a results-driven Full-Stack Developer with experience in building
-        scalable web applications and secure, high-performance APIs across
-        startup and enterprise environments, including Intellect Design Arena.
-        I specialize in developing robust backend architectures and delivering
-        clean, intuitive frontend experiences using the MERN stack, Java, and
-        RESTful APIs. Currently, I am focused on integrating Prompt Engineering
-        and AI-driven workflows to build intelligent, efficient, and
-        future-ready applications, while actively exploring system design
-        concepts to strengthen my understanding of scalability, performance,
-        and reliability. I am passionate about solving complex technical
-        problems and delivering reliable, high-quality solutions through modern
-        full-stack development and intelligent automation.
-      </p>
+      <div className="about-layout">
+        <article className="about-main-card">
+          <span className="about-kicker">Full Stack Developer</span>
+          <p>
+            I build production-ready business applications at Focus Engineering, working across clean frontend
+            systems, dependable APIs, database-backed workflows, and practical AI integrations.
+          </p>
+          <p>
+            My earlier work at Intellect Design Arena and Kairaa Tech Serve shaped how I move quickly while keeping
+            maintainability, security, and user experience in view.
+          </p>
+          <p>
+            I enjoy turning ambiguous business problems into reliable software, especially systems involving
+            role-based access, analytics, workflow automation, and scalable data models.
+          </p>
+        </article>
+
+        <aside className="about-side-panel">
+          {highlights.map((item) => (
+            <div className="about-highlight" key={item.label}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+              <p>{item.detail}</p>
+            </div>
+          ))}
+        </aside>
+
+        <div className="about-capabilities" aria-label="Core capabilities">
+          {capabilities.map((capability) => <span key={capability}>{capability}</span>)}
+        </div>
+      </div>
     </section>
   );
 };

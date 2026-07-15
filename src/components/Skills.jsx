@@ -4,8 +4,23 @@ import {
   Code,
   Globe,
   Database,
-  Wrench
+  Wrench,
+  Server,
+  Cloud,
+  Brain,
+  Users
 } from "lucide-react";
+
+const skillGroups = [
+  { icon: Globe, title: "Frontend", items: ["React", "TypeScript", "JavaScript", "Redux Toolkit", "Tailwind CSS", "Material UI", "Axios"] },
+  { icon: Server, title: "Backend", items: ["Node.js", "Express.js", "FastAPI", "REST APIs", "JWT", "Socket.IO", "WebSockets"] },
+  { icon: Database, title: "Databases", items: ["MongoDB", "MySQL", "Schema Design", "Indexes", "Aggregation"] },
+  { icon: Code, title: "Languages", items: ["JavaScript", "TypeScript", "Python", "SQL", "Java"] },
+  { icon: Cloud, title: "DevOps & Cloud", items: ["Git", "GitHub", "Docker", "CI/CD", "Cloud Fundamentals", "Deployments"] },
+  { icon: Brain, title: "AI", items: ["LLMs", "RAG", "Vector Databases", "Prompt Engineering", "AI Integrations"] },
+  { icon: Wrench, title: "Tools", items: ["Postman", "VS Code", "Figma", "npm", "Vercel", "Render"] },
+  { icon: Users, title: "Soft Skills", items: ["Problem Solving", "Ownership", "Fast Learning", "Communication", "Business Thinking"] },
+];
 
 const Skills = () => {
   return (
@@ -14,78 +29,23 @@ const Skills = () => {
         Technical Skills
         <span className="skills-underline"></span>
       </h2>
-      <p className="skills-subtitle">
-        My technical toolkit and areas of expertise
-      </p>
+      <p className="skills-subtitle">A practical toolkit for shipping clean products, APIs, and AI-enabled workflows.</p>
 
       <div className="skills-grid">
-        {/* Programming Languages */}
-        <div className="skill-card">
-          <div className="skill-header">
-            <div className="skill-icon">
-              <Code size={24} />
+        {skillGroups.map(({ icon: Icon, title, items }) => (
+          <div className="skill-card" key={title}>
+            <div className="skill-header">
+              <div className="skill-icon">
+                <Icon size={22} />
+              </div>
+              <h3>{title}</h3>
             </div>
-            <h3>Programming Languages</h3>
-          </div>
-          <div className="skill-tags">
-            <span>Core Java</span>
-            <span>JDBC</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-
-        {/* Web Technologies */}
-        <div className="skill-card">
-          <div className="skill-header">
-            <div className="skill-icon">
-              <Globe size={24} />
+            <div className="skill-tags">
+              {items.map((item) => <span key={item}>{item}</span>)}
             </div>
-            <h3>Web Technologies</h3>
+            <div className="skill-meter" aria-hidden="true"><span></span></div>
           </div>
-          <div className="skill-tags">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>Bootstrap</span>
-            <span>Tailwind CSS</span>
-            <span>MERN Stack</span>
-            <span>APIs</span>
-          </div>
-        </div>
-
-        {/* Databases */}
-        <div className="skill-card">
-          <div className="skill-header">
-            <div className="skill-icon">
-              <Database size={24} />
-            </div>
-            <h3>Databases</h3>
-          </div>
-          <div className="skill-tags">
-            <span>MySQL</span>
-            <span>SQL</span>
-            <span>Oracle</span>
-            <span>MongoDB</span>
-            <span >MongoDB Atlas Cloud</span>
-          </div>
-        </div>
-
-        {/* Tools */}
-        <div className="skill-card">
-          <div className="skill-header">
-            <div className="skill-icon">
-              <Wrench size={24} />
-            </div>
-            <h3>Tools & Platforms</h3>
-          </div>
-          <div className="skill-tags">
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Postman</span>
-            <span>Figma</span>
-            <span>Firebase</span>
-            <span>Render</span>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

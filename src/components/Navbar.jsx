@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const links = ["about", "skills", "experience", "projects", "github", "contact"];
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -10,17 +11,26 @@ const Navbar = () => {
     return(
         <>
         <nav className="navbar">
-            <img src="/portfolio-logo.png" height="150px" width="200px" alt="logo" className="logo1"/>
+            <a href="#home" className="brand" aria-label="Manish Kumar V home">
+                <img src="/header-logo.png" alt="" aria-hidden="true" />
+                <span>
+                    <span>Manish</span>
+                    <strong>Full Stack Developer</strong>
+                </span>
+            </a>
             <div className="hamburger" onClick={toggleMenu}>
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
             <ul className={`nav-ul ${menuOpen ? 'active' : ''}`}>
-                <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-                <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
-                <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-                <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+                {links.map((link) => (
+                    <li key={link}>
+                        <a href={`#${link}`} onClick={() => setMenuOpen(false)}>
+                            {link.charAt(0).toUpperCase() + link.slice(1)}
+                        </a>
+                    </li>
+                ))}
             </ul>
         </nav>
         </>

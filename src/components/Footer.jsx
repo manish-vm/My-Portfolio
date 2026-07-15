@@ -19,7 +19,7 @@ const Footer = () => {
           <h2>
             Manish<span className="footer-span">VM</span>
           </h2>
-          <p>Thanks for reading.</p>
+          <p>Full Stack Developer focused on scalable web applications and AI-powered solutions.</p>
         </div>
 
         {/* LINKS */}
@@ -28,7 +28,7 @@ const Footer = () => {
             <h3 className="social-link-list-footer-contact">Contact</h3>
             <ul>
               <li className="li1"><img src="/email_logo.png" height="30px" width="30px" alt="email"/><a href="mailto:manishvm310@gmail.com">manishvm310@gmail.com</a></li>
-              <li className="li1"><img src="/phone-logo.png" height="30px" width="30px" alt="phone"/><a href="tel:+91-6385329793">+91 - 6385329793</a></li>
+              <li className="li1"><span>India</span></li>
             </ul>
           </div>
 
@@ -38,7 +38,6 @@ const Footer = () => {
             <ul className="social-link-list-footer">
               <li className="li1"><a href="https://www.linkedin.com/in/manish310a/"><img src="/Gemini_Generated_Image_jd7f9fjd7f9fjd7f-removebg-preview.png" alt="linkedin" height="50px" width="50px" /></a></li>
               <li className="li1"><a href="https://github.com/manish-vm?tab=repositories"><img src="/github_logo.png" alt="github" height="50px" width="50px" /></a></li>
-              <li className="li1"><a href="https://www.instagram.com/manish_vmk_/"><img src="/insta_logo.png" alt="linkedin" height="50px" width="50px" /></a></li>
             </ul>
           </div>
         </div>
