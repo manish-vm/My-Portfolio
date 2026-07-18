@@ -51,6 +51,21 @@ const fallbackRepos = [
 
 const techBadges = ["JavaScript", "TypeScript", "React", "Node.js", "Express", "MongoDB", "CSS", "Vite"];
 const strongestRepos = ["Bullrise_Inventory-Frontend", "Bullrise_Inventory-backend", "Inventory-Management-Frontend", "Inventory-Management-Backend", "HRMS-Frontend", "HRMS-Backend", "Quantix", "Ecommerce-Mern-Application", "My-Portfolio"];
+const githubAchievements = [
+  {
+    title: "Pull Shark",
+    image: "https://github.githubassets.com/images/modules/profile/achievements/pull-shark-default.png",
+    count: "x2",
+  },
+  {
+    title: "Quickdraw",
+    image: "https://github.githubassets.com/images/modules/profile/achievements/quickdraw-default.png",
+  },
+  {
+    title: "YOLO",
+    image: "https://github.githubassets.com/images/modules/profile/achievements/yolo-default.png",
+  },
+];
 
 const getRepoCategory = (repo) => {
   const name = repo.name.toLowerCase();
@@ -74,7 +89,6 @@ const getRepoTech = (repo) => {
   });
 };
 
-const formatDate = (date) => new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" }).format(new Date(date));
 const formatContributionDate = (date) => new Intl.DateTimeFormat("en", { month: "long", day: "numeric", year: "numeric" }).format(new Date(`${date}T00:00:00`));
 const getDateKey = (date) => {
   const year = date.getFullYear();
@@ -208,25 +222,6 @@ const GitHub = () => {
   }, {}), [enrichedRepos]);
   const totalStars = useMemo(() => enrichedRepos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0), [enrichedRepos]);
 
-  const RepositoryCard = ({ repo }) => (
-    <a className={`github-repo-card ${repo.isStrong ? "is-featured" : ""}`} href={repo.html_url} target="_blank" rel="noreferrer">
-      <div className="repo-card-topline">
-        <span>{repo.category}</span>
-        {repo.isStrong && <strong>Highlighted</strong>}
-      </div>
-      <h3>{repo.name}</h3>
-      <p>{repo.description || "Repository by Manish"}</p>
-      <div className="repo-meta-row">
-        <span>{repo.language || "Code"}</span>
-        <span>Updated {formatDate(repo.updated_at)}</span>
-        <span>{repo.stargazers_count || 0} stars</span>
-      </div>
-      <div className="github-tech-badges">
-        {(repo.tech.length ? repo.tech : [repo.language || "Full Stack"]).slice(0, 5).map((tech) => <span key={tech}>{tech}</span>)}
-      </div>
-    </a>
-  );
-
   const ContributionGraph = () => (
     <div className="github-contribution-graph" aria-label={`${totalContributions ?? 0} contributions in the last year`}>
       <div className="contribution-months" aria-hidden="true">
@@ -290,27 +285,56 @@ const GitHub = () => {
       ) : (
         <>
           <div className="github-premium-grid">
-            <article className="github-profile-card">
-              <img src={profile.avatar_url || fallbackProfile.avatar_url} alt="Manish GitHub avatar" loading="lazy" />
-              <div>
-                <p className="eyebrow">Full Stack Developer</p>
-                <h3>{profile.name || "Manish"}</h3>
-                <a href={profile.html_url || PROFILE_URL} target="_blank" rel="noreferrer">@{profile.login || GITHUB_USERNAME}</a>
-                <p>{profile.bio || "Full Stack Developer building scalable web applications and AI-powered solutions."}</p>
-              </div>
-              <div className="github-profile-links">
-                <a href={PROFILE_URL} target="_blank" rel="noreferrer">GitHub Profile</a>
-                <a href="https://manish-portfolio-kappa-two.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a>
-                <a href="https://linkedin.com/in/manish310a" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://www.instagram.com/manish_vmk_/" target="_blank" rel="noreferrer">Instagram</a>
-              </div>
-            </article>
+            <div className="github-profile-stack">
+              <article className="github-profile-card">
+                <img src={profile.avatar_url || fallbackProfile.avatar_url} alt="Manish GitHub avatar" loading="lazy" />
+                <div>
+                  <p className="eyebrow">Full Stack Developer</p>
+                  <h3>{profile.name || "Manish"}</h3>
+                  <a href={profile.html_url || PROFILE_URL} target="_blank" rel="noreferrer">@{profile.login || GITHUB_USERNAME}</a>
+                  <p>{profile.bio || "Full Stack Developer building scalable web applications and AI-powered solutions."}</p>
+                </div>
+                <div className="github-profile-links">
+                  <a href={PROFILE_URL} target="_blank" rel="noreferrer">GitHub Profile</a>
+                  <a href="https://manish-portfolio-kappa-two.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a>
+                  <a href="https://linkedin.com/in/manish310a" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a href="https://www.instagram.com/manish_vmk_/" target="_blank" rel="noreferrer">Instagram</a>
+                </div>
+              </article>
+
+              <article className="github-highlight-strip" aria-label="GitHub engineering highlights">
+                <div>
+                  <span>Product Buildout</span>
+                  <strong>{topRepos.length}+ strong repos</strong>
+                </div>
+                <div>
+                  <span>Core Stack</span>
+                  <strong>React + Node.js</strong>
+                </div>
+                <div>
+                  <span>Delivery Focus</span>
+                  <strong>Inventory, HRMS, E-Commerce</strong>
+                </div>
+              </article>
+            </div>
 
             <article className="github-stat-card github-repo-summary-card">
-              <span>Achievement</span>
-              <div className="repo-achievement">
-                <strong>YOLO</strong>
-                <p>Bold shipping mindset with startup and enterprise project experience.</p>
+              <div className="github-panel-heading">
+                <h3>Earned Achievements</h3>
+                <a href={`${PROFILE_URL}?tab=achievements`} target="_blank" rel="noreferrer">{githubAchievements.length} badges</a>
+              </div>
+              <div className="github-achievement-grid" aria-label="GitHub earned achievements">
+                {githubAchievements.map((achievement) => (
+                  <a className="github-achievement-badge" href={`${PROFILE_URL}?tab=achievements`} target="_blank" rel="noreferrer" key={achievement.title}>
+                    <span className="github-achievement-art">
+                      <img src={achievement.image} alt="" loading="lazy" />
+                    </span>
+                    <strong>
+                      {achievement.title}
+                      {achievement.count && <small>{achievement.count}</small>}
+                    </strong>
+                  </a>
+                ))}
               </div>
             </article>
           </div>
@@ -341,10 +365,6 @@ const GitHub = () => {
             </article>
           </div>
 
-          <div className="github-repo-block">
-            <div className="github-panel-heading"><h3>Top Repositories</h3><span>Strongest work highlighted for recruiters</span></div>
-            <div className="github-repo-grid">{topRepos.map((repo) => <RepositoryCard repo={repo} key={repo.name} />)}</div>
-          </div>
         </>
       )}
     </section>
